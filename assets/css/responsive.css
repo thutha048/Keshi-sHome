@@ -1,0 +1,109 @@
+/*PC*/
+@media (min-width : 64em){ /*1023*/
+
+}
+
+/*tablet & mobile*/
+@media (max-width:  63.9375em){
+    .btn {
+        padding: 15px 20px;
+    }
+    .contact-form .form-control{
+        padding: 15px;
+    }
+
+    .contact-info{
+        line-height: 2;
+    }
+
+    #footer .social-list a{ 
+       margin: 0 4px;
+       font-size: 28px;
+    }
+
+    #footer .copyright a{
+        padding: 4px 0;
+        font-size : 24px;
+        display: inline-block;
+    }
+    
+}
+
+/*Tablet*/
+@media(min-width: 46.25em) and (max-width:  63.9375em){
+
+}
+
+/*Mobile*/
+@media (max-width: 46.1875em) {
+
+    .place-body .mobile-full-width{ 
+        width : 92% !important;
+    }
+    
+    #header{
+        overflow: hidden;
+    }
+
+    #header .mobile-menu-btn{
+        display: block;
+    }
+
+    #header .search-btn{
+        display: none;
+    }
+
+    #navigation > li{
+        display: block;
+    }
+
+    #navigation {
+        display: block;
+    }
+    
+    #navigation .subnavigation{
+        position: initial;
+        background-color: #000;
+    }
+
+    #navigation .subnavigation a{
+        padding : 5px 41px;
+        color: #fff;
+    }
+
+    #navigation li a{
+        padding : 1px 24px;
+
+    }
+
+    #navigation > li > a{
+        color: white;
+        text-transform: uppercase ;
+        background-color: black;
+    }
+
+    #navigation > li:first-child{
+        display: inline-block;
+    }
+
+    #content .song-item{
+        margin-top: 30px;
+        width : 100%;
+    }
+
+    #content .song-img{
+        width: 50%;
+    }
+
+    .contact-form{
+        margin-top: 32px;
+    }
+    .mobile-col-full{
+        width : 100%;
+    }
+
+    .mobile-mt-8{ /*tạo kc giữa email và name*/
+        margin-top:8px !important;
+    }
+    
+}

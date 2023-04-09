@@ -1,0 +1,782 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color:    #72252b;
+    --text-color: #333;
+ }
+
+html{
+    font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;/*hành vi cuộn, vd: khi chọn band thì màn hình sẽ cuộn lên*/
+}
+/*common*/
+.clear{
+    clear:both;
+}
+
+.text-white{
+    color: #fff !important;
+}
+
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+
+}
+
+.row.contact-content {
+    padding: 32px 16px 0px;
+}
+
+.row::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+.col{
+    float:left;
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+
+.col-third{
+    width : 33.333333%;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-full{
+    width : 100%;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+/*cho sang bên phải*/
+.pull-right{
+    float: right !important;
+}
+/*button*/
+.btn{
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    margin-bottom: 16px;
+    background-color: #000;
+    color:#fff;
+    padding: 11px 20px;
+    margin-bottom: 16px;
+    /*bỏ dấu gạch ngang*/
+    text-decoration: none;
+    /*để k bị đè lên content */
+    display: inline-block;
+    border: none;
+}
+
+.btn:hover{
+    color:#000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+/********/
+#main{
+
+}
+
+#header{
+    position: fixed;
+    cursor: pointer;
+    top:0; /*gắn liền lên trên*/
+    left:0; /*gắn liền sang trái*/
+    right:0;
+    height: 46.5px;
+    background-color: black;
+    z-index: 1;
+    /*overflow: hidden;*/
+}
+
+#navigation{
+    display: inline-block;
+}
+
+#navigation,
+.subnavigation{
+    list-style: none;
+}
+
+#navigation > li{
+    display: inline-block;
+}
+
+#navigation li{
+    position: relative;
+}
+
+/* a > b : b là thẻ con trực tiếp của a
+tức: ở đây nó chỉ css từ dòng 14-17 */
+#navigation > li > a{
+    color: white;
+    text-transform: uppercase ;
+}
+#navigation li a{
+    text-decoration: none;
+    line-height: 46.5px;
+    padding : 0px 24px;
+    display:  block;
+}
+
+#navigation li:hover .subnavigation{
+    display:block;
+}
+
+#navigation .subnavigation li:hover a,
+#navigation>li:hover >a{
+    color: #000;
+    background-color: #ccc;
+}
+
+#navigation .subnavigation{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left:0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    min-width: 160px; 
+}
+
+
+#navigation .subnavigation a{
+    color: #000;
+    padding-left : 16px;
+    line-height: 38.5px;
+}
+
+#navigation .nav-arrow-down{
+    font-size: 10px;
+}
+
+#header .mobile-menu-btn{
+    position: absolute;
+    top:0;
+    right:0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn{
+    float: right;
+    padding: 0 24px;
+    background-color: black;
+   /* padding: 12px 24px;
+    height: 46.5px;
+    width: 61.94px;*/  
+
+}
+
+#header .menu-icon,
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+   line-height: 46.5px;
+   
+}
+
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+    color: black;
+}
+
+#header .search-btn:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
+
+
+#slider .text-content {
+    position: absolute;
+    bottom: 50px;
+    color: #fff;
+    text-align: center;
+     /*cách 2*/
+    width:100%;
+    
+    /*căn giữa: cách1
+    left: 50%;
+    transform: translateX(-50%);*/
+
+   
+    
+}
+#slider .text-heading {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight:700;
+    font-size:24px;
+    text-shadow: 0 0 20px #000
+}
+#slider .text-description {
+    font-size: 15px;
+    /*in đậm :*/
+    font-weight: bolder;
+    line-height: 1.5;
+    margin-top: 25px;
+    text-shadow: 0 0 20px #000;
+}
+
+
+#slider{
+  /*  min-height : 500px;*/
+    position: relative; /*trục tọa độ góc trên trái*/
+    margin-top: 46.5px;
+    padding-top: 50%;
+   /*background: url('/assets/img/slider/slider1.jpg') top center/ cover no-repeat;*/
+    background: url('../img/slider/keshiSlider.jpg') top center/ cover no-repeat;
+}
+
+
+#content .content-section{
+    width :800px;
+    max-width: 100%; /* tablet res*/
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px 96px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+
+#content .section-heading{
+    text-align :center;
+    font-size: 30px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;/*độ mỏng chữ*/
+    margin: 10px 0px;
+    letter-spacing: 4px; /*khoảng cách các chữ cái*/
+}
+
+#content .section-sub-heading{
+    text-align :center;
+    font-size: 15px;
+    margin : 15px 0px;
+    font-style: italic;
+    color:#000;
+    opacity: 0.6;/*độ trong suốt còn 0.6, từ 0-1*/
+}
+#content  .about-text{
+    margin: 15px 0px;
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.4 ;/*độ cao của dòng*/
+}
+
+#content .song-list{
+    margin-top: 47px;
+    /*c2: overflow: hidden; vì float bị co lại */
+}
+
+/* #content .song-item{
+   float:left; căn 3 ảnh sang ngang hàng
+    width: 33.33333%; căn giữa 3 ảnh
+    text-align: center; căn giữa chữ
+} */
+
+#content .song-name{
+    margin: 15px 0px;
+    font-size: 15px;
+}
+
+#content .song-img{
+    width: 154px;
+    height: 185px;
+    border-radius: 4px; /*bo tròn góc ảnh*/
+}
+
+/*album section*/
+.album-section{
+    background-color: #000;
+    
+}
+
+.product-list{
+    list-style: none; /*bỏ dấu . ở đầu các list*/
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.product-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd; /*đường kẻ */
+}
+
+.product-list .sold-out{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.product-list .quantity{
+    background-color: #000;
+    color: #fff;
+    float: right;/*cho sang góc phải*/
+    margin-top: -3px;
+    width: 24px;
+    height:24px;
+    /*hình tròn:*/
+    border-radius: 50%;
+    text-align: center; /*căn giữa chiều ngang*/
+    line-height: 24px; /*căn giữa chiều dọc = chiều cao của nó*/
+}
+
+/*albums*/
+.album-list{
+    margin-top: 16px;
+
+}
+
+
+.album-img{
+    width: 100%;
+    height:180px;
+    display: block;/*bỏ khoảng cách giữa ảnh và phần chữ*/
+}
+
+/*Trỏ chuột vào thì mờ ảnh*/
+.album-img:hover{
+    opacity: 0.6; 
+}
+.album-body{
+    background-color: white;
+    padding : 0 16px;
+    font-size: 15px;
+    height: 370px;
+    width: 100%;
+    position: relative;
+
+}
+.btn--bottom{
+    position: absolute;
+    bottom:8px;
+}
+.album-heading{
+    /*để khi margin nó k bị đè lên phần phía trên */
+    display: inline-block;
+    margin: 15px 0;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.album-time{
+    margin-top: 15px;
+    color: #000;
+    opacity: 0.6;
+    font-size: 15px;
+}
+.album-content{
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/*Modal*/
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom:0;
+    left:0;
+    /*display: flex;*/
+    display: none;
+    /**để modal-container nằm giữa chiều ngang*/
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-container{
+    background-color: #fff;
+    width : 900px;
+    max-width: calc(100% - 32px);/*responsive để khi mh to nhỏ thì modal cách viền 1 khoảng 16px*/
+    min-height: 200px;
+    position: relative;
+    /*dùng keyframes; ease 0.3s: thời gian chạy */
+    animation: modalFace ease 0.5s;
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    top:0;
+    color: #fff;
+    padding: 12px;/*để khi di chuột vào hover dễ bấm hơn*/
+    cursor: pointer;
+   
+}
+
+.modal-close:hover{
+    color:#000;
+    background-color: #ccc;
+}
+
+
+.modal-header{
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-headicon{
+    margin-right:16px;
+}
+
+.modal-body{
+    padding: 16px;
+}
+
+.modal-label{
+    display: block; /*để xuống dòng cho chữ và ô ở modal này*/
+    font-size: 15px;
+    margin: 15px 0px;
+}
+
+.modal-input{
+    border: 1px solid #ccc;
+    width:100%;
+    font-size: 15px;
+    padding : 10px;
+}
+
+#buy-product{
+    background-color: #009688;
+    color: #fff;
+    width: 100%;
+    margin: 16px 0px;
+    padding: 16px;
+    font-size: 15px;
+    /*viết hoa*/
+    text-transform: uppercase;
+    /*bỏ khung đen : */
+    border: none;
+    cursor: pointer;
+}
+
+#buy-product:hover{
+    background-color: #ccc;
+    color:#000;
+}
+
+
+.modal-help{
+   
+    margin: 15px;
+   float: right; 
+   /*text-align :right;*/
+}
+
+.modal-footer a{
+    color : #2196F3;
+}
+
+/*Contact form*/
+.content-section{
+    /*margin-top: 48px;*/
+    /* background-color: #000; */
+}
+
+.contact-info{
+    font-size: 18px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.contact-info a{
+    opacity:0.6;
+}
+
+.contact-info a:hover{
+    color:#070dab;
+    opacity: 1;
+}
+
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
+    font-size : 15px;
+}
+
+.form-control{
+    padding: 8px;
+    border : 1px solid #ccc;
+    width:100%;
+    /*outline: none;bỏ đường viền xanh khi bấm vào ô*/
+    outline-color: #000;
+    outline-width: 2px;
+}
+
+/*end section*/
+.end-section img{
+    width:100%;
+}
+
+/*Footer section*/
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list{
+    font-size: 24px;
+}
+
+#footer .social-list a{
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a:hover,
+#footer .social-list a:hover{
+    color: rgba(0,0,0,0.4);
+}
+
+#footer .copyright{
+    margin: 15px;
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 32px;
+
+}
+
+#footer .copyright a{
+    color: rgba(0,0,0,0.6);
+}
+
+@keyframes modalFace {
+    from{
+        opacity:0;
+        transform: translateY(-140px);
+    }to{
+        opacity:1;
+        transform: translateY(0px);
+    }
+}
+
+/*
+    PC : min-width= 1024px
+    Tablet : >= 740px and < 1024px
+    Mobile: <740px
+*/
+
+/*Music Player*/
+.music{
+    padding: 96px 16px 84px;
+    background-color:  #b5868a;
+}
+.player {
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto;
+    /* display: none; */
+  }
+
+.player.open{
+    display: block;
+}
+  
+.player .icon-pause {
+    display: none;
+}
+
+.player.playing .icon-pause {
+    display: inline-block;
+}
+
+.player.playing .icon-play {
+    display: none;
+}
+
+.dashboard {
+    padding: 16px 16px 14px;
+    background-color: #fff;
+    /* position: fixed; */
+    /* top: 0; */
+    width: 100%;
+    max-width: 480px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+/* HEADER */
+header {
+    text-align: center; 
+    margin-bottom: 10px;
+}
+
+header h4 {
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+header h2 {
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+/* CD */
+.cd {
+    display: flex;
+    margin: auto;
+    width: 200px;
+}
+
+/* .cd-thumb {
+width: 100%;
+padding-top: 100%;
+border-radius: 50%;
+background-color: #333;
+background-size: cover;
+    margin: auto;
+} */
+
+/* CONTROL */
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 18px 0 8px 0;
+}
+
+.control .btn-music {
+    color: #ad9d9d;
+    padding: 18px;
+    font-size: 18px;
+}
+
+.control .btn-music.active {
+    color: var(--primary-color);
+}
+
+.btn-music:hover{
+    cursor: pointer;
+        /* color: var(--primary-color); */
+}
+
+.control .btn-toggle-play {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.progress {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* PLAYLIST */
+.playlist {
+/* margin-top: 408px; */
+    background-color: #dbb3b3;
+    padding: 12px;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.song.active {
+    background-color: var(--primary-color);
+}
+
+.song:active {
+    opacity: 0.8;
+}
+
+.song.active .option,
+.song.active .author,
+.song.active .title {
+    color: #fff;
+}
+
+.song .thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0 8px;
+}
+
+.song .body {
+    flex: 1;
+    padding: 0 16px;
+}
+
+.song .title {
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.song .author {
+    font-size: 12px;
+    color: #999;
+}
+
+.song .option {
+    padding: 16px 8px;
+    color: #999;
+    font-size: 18px;
+}

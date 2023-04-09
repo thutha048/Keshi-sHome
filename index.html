@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset= "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--chú ý-->
+        <link rel="icon" href="https://themify.me/wp-content/themes/themify-v32/favicon.png" type="image/x-icon" />
+        <link rel = "stylesheet" href="./assets/css/style.css">
+        <link rel = "stylesheet" href="./assets/css/responsive.css"> <!--ưu tiên thì viết dưới-->
+        <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.1-web/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <title>Keshi's home</title>
+    </head>
+
+    <body>
+        <div id ="main">
+            <!--begin header-->
+            <div id="header">
+                <!--begin nav-->
+                <ul id="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#album">Album</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a href="#"><!--dau # : o nguyen trang hien tai-->
+                            More
+                            <i class="nav-arrow-down ti-angle-down"></i>
+                        </a>
+                        <ul class="subnavigation">
+                            <li><a href="#">Author</a></li>
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Media</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- end nav-->
+
+                <!--Mobile menu button-->
+                <div id="mobile-menu" class="mobile-menu-btn">
+                    <i class="menu-icon ti-menu"></i>
+                </div>
+
+                <!--begin search-->
+                <div class="search-btn">
+                    <i class="search-icon ti-search"></i>
+                </div>
+                <!--end search-->
+            </div>
+            <!--end header-->
+
+            <!--Begin slider-->
+            <div id="slider">
+                <div class="text-content">
+                    <h2 class="text-heading">KESHI</h2>
+                    <div class="text-description">Welcome to KESHI's home.</div>
+                  <!--  <img src="./assets/img/slider/slider1.jpg" alt="" class="slider-img"> -->
+                </div>
+            </div>
+            <!--end slider-->
+
+
+            <!--begin content-->
+            <div id="content">
+                <!--About Keshi-->
+                <div id="artist" class ="content-section">
+                    <h2 class="section-heading">THIS IS KESHI</h2>
+                    <p class="section-sub-heading">Casey Luong</p>
+                    <p class=" about-text">
+                        Casey Luong (born November 4, 1994), known mononymously by his stage name 
+                        Keshi (stylized in all lowercase), is an American singer, songwriter, record producer,
+                         and multi-instrumentalist. Luong was born in Houston, Texas, to Vietnamese parents and grew up in Sugar Land.
+                         Known for his distant falsetto vocals and textural instrumentals,
+                         he has accumulated over one billion streams with songs such as "Like I Need U", "Limbo" and "drunk".
+                    </p>
+
+                    <div class="row song-list">
+                        <div class="song-item col col-third text-center ">
+                            <p class="song-name">Like I Need U</p>
+                            <img src="./assets/img/song/song1.jpg" alt="Like I Need U" class="song-img">
+                        </div>
+
+                        <div class="song-item col col-third text-center ">
+                            <p class="song-name">Limbo</p>
+                            <img src="./assets/img/song/song2.jpg" alt="Limbo" class="song-img">
+                        </div>
+
+                        <div class="song-item col col-third text-center ">
+                            <p class="song-name">drunk</p>
+                            <img src="./assets/img/song/song3.jpg" alt="drunk" class="song-img">
+                        </div>
+                        <div class="clear"></div><!--xử lí float bị co lại-->
+                    </div>
+
+                </div>
+            
+
+                <!--album section-->
+                <div id="album" class="album-section">
+                    <div class ="content-section">
+                        <!--2 class cách nhau bởi dấu cách-->
+                        <h2 class="section-heading text-white">ALBUM,EP</h2>
+                        <p class="section-sub-heading text-white">Remember to listen, buy them!</p>
+                        
+                        <!--product-->
+                        <ul class="product-list">
+                            <li>March 2022 <span class="sold-out">Sold out</span></li>
+                            <li>November 2020 <span class="sold-out">Sold out</span></li>
+                            <li>March 2020 <span class="quantity">8</span></li>
+                        </ul>
+
+                        <!--album-->
+                        <div class="row album-list">
+                            <!--Gabriel-->
+                            <div class="col col-third mobile-col-full mt-16">
+                                <img src="./assets/img/album/album1.jpg" alt="Gabriel" class="album-img">
+                                <div class="album-body">
+                                    <h3 class="album-heading">GABRIEL</h3>
+                                    <p class="album-time">Fri 25 Mar 2022</p>
+                                    <p class="album-content">On March 25, Vie-Amer artist keshi dropped his highly-anticipated and long-awaited first full album, GABRIEL. Co-produced with Elie Rizk, creating GABRIEL was a personal process for keshi..</p>
+                                    <button  class="btn btn--bottom js-buy-product mobile-full-width">Buy Album/ EP</button>
+                                </div>
+                            </div>
+                            
+                            <!--Bandaids-->
+                            <div class="col col-third mobile-col-full mt-16">
+                                <img src="./assets/img/album/album2.jpg" alt="Bandaids" class="album-img">
+                                <div class="album-body">
+                                    <h3 class="album-heading">Bandaids</h3>
+                                    <p class="album-time">Sat 28 Nov 2020</p>
+                                    <p class="album-content">The EP starts with the snazzy acoustic guitar and soft harmonizing voices of “less of you.” Keshi’s voice alternates between distorted and gentle, accompanied by a trap beat.</p>
+                                    <button  class="btn btn--bottom js-buy-product mobile-full-width">Buy Album/ EP</button>
+                                </div>
+                            </div>
+
+                            <!--Always-->
+                            <div class="col col-third mobile-col-full mt-16">
+                                <img src="./assets/img/album/album3.jpg" alt="Always" class="album-img">
+                                <div class="album-body">
+                                    <h3 class="album-heading">Always</h3>
+                                    <p class="album-time">Sun 29 March 2020</p>
+                                    <p class="album-content">keshi began writing his latest EP always immediately after the release of his EP bandaids in March. The entirety of always was written in quarantine, in between online gaming sessions with friends, Netflix binges, and doing a lot of cooking.</p>
+                                    <button  class="btn btn--bottom js-buy-product mobile-full-width">Buy Album/ EP</button>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+
+                    </div>
+                </div>
+            
+                 <!--MusicPlayer-->
+                <div id="music" class="music">
+                    <div class="player ">
+                        <!-- Dashboard -->
+                        <div class="dashboard">
+                        <!-- Header -->
+                        <header>
+                            <h1 class="section-heading">MUSIC PLAYER</h1>
+                            <h4>Now playing:</h4>
+                            <h2>LIMBO</h2>
+                        </header>
+                    
+                        <!-- CD -->
+                        <div class="cd">
+                            <div class="cd-thumb"><!--cd thumbnail-->
+                            </div>
+                        </div>
+                    
+                        <!-- Control -->
+                        <div class="control">
+                            <div class="btn-music btn-repeat">
+                            <i class="fas fa-redo"></i>
+                            </div>
+                            <div class="btn-music btn-prev">
+                            <i class="fas fa-step-backward"></i>
+                            </div>
+                            <div class="btn-music btn-toggle-play">
+                            <!-- <i class="fas fa-pause icon-pause"></i> -->
+                            
+                            <i class="ti-control-pause icon-pause"></i>
+
+                            <i class="ti-control-play icon-play"></i>
+                            </div>
+                            <div class="btn-music btn-next">
+                            <i class="fas fa-step-forward"></i>
+                            </div>
+                            <div class="btn-music btn-random">
+                            <i class="fas fa-random"></i>
+                            </div>
+                        </div>
+                    
+                        <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100"> 
+                    
+                        <audio id="audio" src=""></audio>
+                        </div>
+                    
+                        <!-- Playlist -->
+                        <div class="playlist">
+                        </div>
+                    </div>
+                </div>
+                
+                 <!--begin: Contact section-->
+                <div id="contact" class ="content-section">
+                    <h2 class="section-heading">CONTACT</h2>
+                    <p class="section-sub-heading">Happy!Keshi!</p>
+                    
+                    <div class="row contact-content">
+                        <div class="col col-half mobile-col-full contact-info">
+                            <p><i class="ti-location-pin"></i>Chicago, US </p>
+                            <p><i class="ti-mobile"></i>Phone: <a href="tel:+00 151515">+00 151515</a> </p>
+                            <p><i class="ti-email"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a> </p>
+                        </div>
+                        <div class="col col-half mobile-col-full contact-form">
+                            <form action="">
+                                <div class="row ">
+                                    <div class="col col-half mobile-col-full">
+                                        <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                                    </div>
+                                    <div class="col col-half mobile-col-full mobile-mt-8">
+                                        <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row mt-8">
+                                    <div class="col col-full">
+                                        <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                                    </div>
+                                </div>
+
+                                <input class= "btn mt-16 pull-right mobile-full-width "type="submit" value="SEND">
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+                 <!--end: Contact section-->
+
+                 <!--begin end-->
+                 <div class="end-section">
+                    <img src="./assets/img/footer/keshiFooter.jpg" alt="end">
+                 </div>
+                 <!--begin end-->
+
+            </div>
+            <!--end content-->
+            
+            <!--begin footer-->
+            <div id="footer">
+                <div class="social-list">
+                    <a href=""><i class="ti-facebook"></i></a>
+                    <a href=""><i class="ti-instagram"></i></a>
+                    <a href=""><i class="ti-youtube"></i></a>
+                    <a href=""><i class="ti-pinterest"></i></a>
+                    <a href=""><i class="ti-twitter"></i></a>
+                    <a href=""><i class="ti-linkedin"></i></a>
+
+                </div>
+                
+                <p class="copyright">Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
+            </div>
+            <!--begin footer-->
+
+        </div>
+
+        <!--Albums modal-->
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <div class="modal-close js-modal-close">
+                    <i class="ti-close"></i>
+                </div>
+
+                <header class="modal-header">
+                    <i class="modal-headicon ti-bag"></i>
+                    Albums
+                </header>
+
+                <div class="modal-body">
+                    <label for="product-quantity" class="modal-label">
+                        <i class="ti-shopping-cart"></i>
+                        Albums, $50 per album
+                    </label>
+                    <input id="product-quantity" type="text" class="modal-input" placeholder="How many?">
+
+                    <label for="address" class="modal-label">
+                        <i class="ti-user"></i>
+                        Send to
+                    </label>
+                    <input id="address" type="email" class="modal-input" placeholder="Enter email...">
+               
+                    <button id="buy-product">
+                        Pay
+                        <i class="ti-check"></i>
+                    </button>
+                    
+                </div>
+
+                <footer class="modal-footer">
+                    <p class="modal-help">Need <a href="">help?</a></p>
+                </footer>
+            </div>
+        </div>
+
+       
+        <script src="./modal.js"></script>
+        <script src="./musicPlayer.js"></script>
+
+    </body>
+</html>
